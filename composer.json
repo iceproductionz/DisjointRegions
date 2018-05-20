@@ -1,0 +1,24 @@
+{
+  "name": "iceproductionz/disjoint-regions",
+  "description": "Disjoint regions",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Musa Chanakira",
+      "email": "jethot@hotmail.co.uk"
+    }
+  ],
+  "autoload" : {
+    "psr-4" : { "Iceproductionz\\DisjointRegions\\": "src" }
+  },
+  "autoload-dev" : {
+    "psr-4" : {
+      "Iceproductionz\\DisjointRegions\\Integration": "tests/integration" ,
+      "Iceproductionz\\DisjointRegions\\Unit": "tests/unit"
+    }
+  },
+  "require": {
+    "beberlei/assert": "^2.9"
+  }
+}
