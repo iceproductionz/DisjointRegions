@@ -56,8 +56,6 @@ class Runner
     }
 
     /**
-     * TODO Simplify workflows.
-     *
      * Create new region
      *
      * @param Region $region
