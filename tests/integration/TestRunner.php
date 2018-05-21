@@ -1,20 +1,23 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ice
- * Date: 21/05/2018
- * Time: 07:32
- */
 
 namespace Iceproductionz\DisjointRegions\Integration;
-
 
 use Iceproductionz\DisjointRegions\Model\Region\Collection;
 use Iceproductionz\DisjointRegions\Runner;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class TestRunner
+ *
+ * @package Iceproductionz\DisjointRegions\Integration
+ */
 class TestRunner extends TestCase
 {
+    /**
+     * Provide Test Data.
+     *
+     * @return array
+     */
     public function provideValues()
     {
         return [
