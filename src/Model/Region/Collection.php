@@ -2,6 +2,11 @@
 
 namespace Iceproductionz\DisjointRegions\Model\Region;
 
+/**
+ * Class Collection
+ *
+ * @package Iceproductionz\DisjointRegions\Model\Region
+ */
 class Collection implements \Countable
 {
     /**

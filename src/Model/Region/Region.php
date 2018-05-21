@@ -2,7 +2,11 @@
 
 namespace Iceproductionz\DisjointRegions\Model\Region;
 
-
+/**
+ * Class Region
+ *
+ * @package Iceproductionz\DisjointRegions\Model\Region
+ */
 class Region
 {
 

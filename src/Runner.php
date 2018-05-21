@@ -4,6 +4,11 @@ namespace Iceproductionz\DisjointRegions;
 use Iceproductionz\DisjointRegions\Model\Region\Collection;
 use Iceproductionz\DisjointRegions\Model\Region\Region;
 
+/**
+ * Class Runner
+ *
+ * @package Iceproductionz\DisjointRegions
+ */
 class Runner
 {
     /**
@@ -39,8 +44,6 @@ class Runner
 
     /**
      * Create a Region
-     *
-     * @param array $testData
      */
     public function createRegions()
     {
@@ -58,6 +61,8 @@ class Runner
     }
 
     /**
+     * TODO Simplify workflows.
+     *
      * Create new region
      *
      * @param Region $region
