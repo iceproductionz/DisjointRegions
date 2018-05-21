@@ -4,11 +4,6 @@ namespace Iceproductionz\DisjointRegions;
 use Iceproductionz\DisjointRegions\Model\Region\Collection;
 use Iceproductionz\DisjointRegions\Model\Region\Region;
 
-/**
- * Class Runner
- *
- * @package Iceproductionz\DisjointRegions
- */
 class Runner
 {
     /**
@@ -43,7 +38,7 @@ class Runner
     }
 
     /**
-     * Create a Region
+     * Create Regions
      */
     public function createRegions()
     {
