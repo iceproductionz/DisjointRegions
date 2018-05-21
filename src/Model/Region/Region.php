@@ -16,6 +16,8 @@ class Region
     private $regions = [[]];
 
     /**
+     * Add new position to region
+     *
      * @param int $row
      * @param int $col
      */
@@ -25,7 +27,7 @@ class Region
     }
 
     /**
-     * Has Region
+     * Check if position is already a region
      *
      * @param int $row
      * @param int $col

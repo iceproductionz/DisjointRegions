@@ -25,7 +25,7 @@ class Collection implements \Countable
     }
 
     /**
-     * Regions
+     * Add a regions to collection
      *
      * @param Region $region
      */
@@ -35,6 +35,8 @@ class Collection implements \Countable
     }
 
     /**
+     * Get all Regions created
+     *
      * @return Region[]
      */
     public function getRegions(): array
@@ -60,6 +62,8 @@ class Collection implements \Countable
     }
 
     /**
+     * Get number of regions recorded
+     *
      * @return int
      */
     public function count(): int

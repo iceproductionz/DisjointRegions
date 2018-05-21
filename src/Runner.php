@@ -4,6 +4,13 @@ namespace Iceproductionz\DisjointRegions;
 use Iceproductionz\DisjointRegions\Model\Region\Collection;
 use Iceproductionz\DisjointRegions\Model\Region\Region;
 
+/**
+ * Class Runner
+ *
+ * @package Iceproductionz\DisjointRegions
+ *
+ * @todo Row and column can be a Model, which can reduce validation  on the array
+ */
 class Runner
 {
     /**
@@ -56,7 +63,7 @@ class Runner
     }
 
     /**
-     * Create new region
+     * Create the full scope of the region covered by recording all columns
      *
      * @param Region $region
      * @param int $row
