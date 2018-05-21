@@ -67,32 +67,119 @@ class Runner
      */
     public function createRegion(Region $region, int $row, int $col): Region
     {
-
-        $top    = $row - 1;
-        $bottom = $row + 1;
-        $left   = $col - 1;
-        $right  = $col + 1;
-
         if (isset($this->testData[$row][$col]) && $this->testData[$row][$col] === 1 && $region->has($row, $col) === false) {
             $region->add($row, $col);
         }
 
-        if (isset($this->testData[$top][$col]) && $this->testData[$top][$col] === 1 && $region->has($top, $col) === false) {
-            $this->createRegion($region, $top, $col);
-        }
-
-        if (isset($this->testData[$bottom][$col]) && $this->testData[$bottom][$col] === 1 && $region->has($bottom, $col) === false) {
-            $this->createRegion($region, $bottom, $col);
-
-        }
-        if (isset($this->testData[$row][$left]) && $this->testData[$row][$left] === 1 && $region->has($row, $left) === false) {
-            $this->createRegion($region, $row, $left);
-        }
-
-        if (isset($this->testData[$row][$right]) && $this->testData[$row][$right] === 1 && $region->has($row, $right) === false) {
-            $this->createRegion($region, $row, $right);
-        }
+        $this->moveUp($region, $row, $col);
+        $this->moveDown($region, $row, $col);
+        $this->moveLeft($region, $row, $col);
+        $this->moveRight($region, $row, $col);
 
         return $region;
+    }
+
+    /**
+     * Move Up
+     *
+     * @param Region $region
+     * @param int $row
+     * @param int $col
+     */
+    public function moveUp(Region $region, int $row, int $col)
+    {
+        $up = $row - 1;
+
+        if (!isset($this->testData[$up][$col])) {
+            return ;
+        }
+
+        if ($this->testData[$up][$col] === 0) {
+            return ;
+        }
+
+        if ($region->has($up, $col) === true) {
+            return ;
+        }
+
+        $this->createRegion($region, $up, $col);
+    }
+
+    /**
+     * Move Down
+     *
+     * @param Region $region
+     * @param int $row
+     * @param int $col
+     */
+    public function moveDown(Region $region, int $row, int $col)
+    {
+        $bottom = $row + 1;
+
+        if (!isset($this->testData[$bottom][$col])) {
+            return ;
+        }
+
+        if ($this->testData[$bottom][$col] === 0) {
+            return ;
+        }
+
+        if ($region->has($bottom, $col) === true) {
+            return ;
+        }
+
+        $this->createRegion($region, $bottom, $col);
+    }
+
+    /**
+     * Move Left
+     *
+     * @param Region $region
+     * @param int $row
+     * @param int $col
+     */
+    public function moveLeft(Region $region, int $row, int $col)
+    {
+        $left = $col - 1;
+
+        if (!isset($this->testData[$row][$left])) {
+            return ;
+        }
+
+        if ($this->testData[$row][$left] === 0) {
+            return ;
+        }
+
+        if ($region->has($row, $left) === true) {
+            return ;
+        }
+
+        $this->createRegion($region, $row, $left);
+    }
+
+    /**
+     * Move Right
+     *
+     * @param Region $region
+     * @param int $row
+     * @param int $col
+     */
+    public function moveRight(Region $region, int $row, int $col)
+    {
+        $right = $col + 1;
+
+        if (!isset($this->testData[$row][$right])) {
+            return ;
+        }
+
+        if ($this->testData[$row][$right] === 0) {
+            return ;
+        }
+
+        if ($region->has($row, $right) === true) {
+            return ;
+        }
+
+        $this->createRegion($region, $row, $right);
     }
 }
